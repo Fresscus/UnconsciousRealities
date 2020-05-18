@@ -106,6 +106,8 @@ let saveSwitch = false;
 let barIntro = 0;
 let infoIntro = 0;
 
+let start = true;
+
 function preload(){
   font = loadFont('FetishRegular.ttf');
 
@@ -212,6 +214,13 @@ function setup(){
 function draw(){
 
   scale(scaleNo);
+
+  if(start == true){
+  GreenVid[0].play();
+  GreenVid[0].stop();
+  reset();
+  start=false;
+  }
 
   textFont(font);
   textSize(50);
