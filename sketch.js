@@ -702,6 +702,16 @@ function loadVideos(){
 
 function mouseClicked(){
   if(mouseStage == 'start'){
+
+    for(let i = 0; i<6; i++){
+    YellowVid[i].remove();
+    GreenVid[i].remove();
+    RedVid[i].remove();
+  }
+
+  loadVideos();
+  
+  
     begin = true;
     mouseStage = 'none';
   }
