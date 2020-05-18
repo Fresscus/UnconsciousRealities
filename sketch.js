@@ -168,10 +168,18 @@ function setup(){
     SizeSmall = false;
   }
 
+  if((windowHeight >= 360)&&(windowWidth >= 640)   &&   ((windowHeight < 576)||(windowWidth < 1024))){ //1280x720
+    canvasWidth = 640;
+    canvasHeight = 360;
+
+    scaleNo = 360/1080;
+    SizeSmall = false;
+  }
+
   canvas = createCanvas(canvasWidth, canvasHeight);
 
-  if((windowHeight < 576) ||(windowWidth < 1024)){ //1280x720
-    canvas = createCanvas(500, 500);
+  if((windowHeight < 360) ||(windowWidth < 640)){ //1280x720
+    canvas = createCanvas(500, 300);
     SizeSmall = true;
     scaleNo = 1;
   }
@@ -387,7 +395,7 @@ function draw(){
     background(255);
     fill(0);
     textSize(20);
-    text("Please enlarge the window size \n or try the program on a device \n with a larger resolution",20,20);
+    text("Please enlarge the window size \n or try the program on a device \n with a larger resolution",50,50);
   }
 }
 
@@ -734,6 +742,14 @@ function windowResized(){
     SizeSmall = false;
   }
 
+  if((windowHeight >= 1080)&&(windowWidth >= 1920)){ //original
+    canvasWidth = 1920;
+    canvasHeight = 1080;
+
+    scaleNo = 1;
+    SizeSmall = false;
+  }
+
   if((windowHeight >= 720)&&(windowWidth >= 1280)   &&   ((windowHeight < 1080)||(windowWidth < 1920))){ //1280x720
     canvasWidth = 1280;
     canvasHeight = 720;
@@ -750,10 +766,18 @@ function windowResized(){
     SizeSmall = false;
   }
 
+  if((windowHeight >= 360)&&(windowWidth >= 640)   &&   ((windowHeight < 576)||(windowWidth < 1024))){ //1280x720
+    canvasWidth = 640;
+    canvasHeight = 360;
+
+    scaleNo = 360/1080;
+    SizeSmall = false;
+  }
+
   canvas = createCanvas(canvasWidth, canvasHeight);
 
-  if((windowHeight < 576) ||(windowWidth < 1024)){ //1280x720
-    canvas = createCanvas(500, 500);
+  if((windowHeight < 360) ||(windowWidth < 640)){ //1280x720
+    canvas = createCanvas(500, 300);
     SizeSmall = true;
     scaleNo = 1;
   }
