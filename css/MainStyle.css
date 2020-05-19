@@ -10,6 +10,8 @@ font-family: "roboto";
 src: url("../Main/Font/Roboto-Light.ttf");
 }
 
+html { scroll-behavior: smooth; } 
+
 body{
 	font-family: roboto;
 	font-size: 20px;
@@ -26,6 +28,32 @@ body{
   	top: 0;
   	left: 0;
   	z-index: 5;
+}
+
+#press .downButton{
+    background: url("../Icons/down.png") no-repeat;
+    width:30px;
+    height:30px;
+    top: 95%;
+    left: 50%;
+    z-index: 5;
+ 	position:absolute;
+ 	background-size: cover;
+	background-repeat: no-repeat;
+	margin-left: -15px;
+}
+
+#press .downButton:hover{
+    background: url("../Icons/down_.png") no-repeat;
+    width:30px;
+    height:30px;
+    top: 95%;
+    left: 50%;
+    z-index: 5;
+ 	position:absolute;
+ 	background-size: cover;
+	background-repeat: no-repeat;
+	margin-left: -15px;
 }
 
 .slides-navigation{
@@ -46,14 +74,25 @@ body{
  	position:absolute;
 }
 
+
 .fresscus{
     width:210px;
 	height:70px;
-    top: 90%;
-    left: 50%;
-    z-index: 5;
     margin-left: -105px;
  	position:absolute;
+ 	top: 88%;
+    left: 50%;
+    z-index: 5;
+}
+
+.ctrlz{
+    width:70px;
+	height:70px;
+    margin-left: -35px;
+ 	position:absolute;
+ 	top: 82%;
+    left: 50%;
+    z-index: 5;
 }
 
 .heading{
@@ -81,11 +120,9 @@ body{
 
 .banner{
 	background-image: url('../Main/Images/banner.jpg');
+	padding: 50px 0px 60px 0px;
 }
 
-.button{
-	margin: 100px;
-}
 
 .projectButton{
 	color: #FFF;
@@ -96,10 +133,9 @@ body{
 	border-radius: 2px;
 	font-size: 23px;
 	text-align: center;
-
 	font-family: roboto
 	font-weight: bolder;
-
+	align-self: center;
 }
 
 .projectButton:hover{
@@ -110,7 +146,7 @@ body{
 
 .projectButton2{
 	color: #FFF;
-	padding: 20px 70px;
+	padding: 20px 74px;
 	display: inline-block;
 	margin-top: 20px;
 	border: 2px solid #FFF;
@@ -120,7 +156,6 @@ body{
 
 	font-family: roboto
 	font-weight: bolder;
-
 }
 
 .projectButton2:hover{
@@ -181,21 +216,35 @@ body{
     text-align: center;
     margin-top: -10px;
     font-family: amatic;
-	font-size: 50px;
+	font-size: 45px;
 	color: #fff;
     font-weight: 300;
-    letter-spacing: 10px;
+    letter-spacing: 3px;
  	position:absolute;
  }
  .fresscus{
-    width:150px;
-	height:50px;
+    width:90px;
+	height:30px;
     top: 80%;
     left: 50%;
     z-index: 5;
-    margin-left: -75px;
+    margin-left: -45px;
  	position:absolute;
 }
+
+.ctrlz{
+    width:40px;
+	height:40px;
+    margin-left: -20px;
+ 	position:absolute;
+ 	top: 74%;
+    left: 50%;
+    z-index: 5;
+}
+
+
+}
+
 }
 @media only screen and (max-width: 600px){
 	.MainTitle{
@@ -208,8 +257,55 @@ body{
 	font-size: 30px;
 	color: #fff;
     font-weight: 300;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
  	position:absolute;
  }
+}
+
+@media only screen and (max-height: 500px){
+
+	.fresscus{
+    width:90px;
+	height:30px;
+    top: 80%;
+    left: 50%;
+    z-index: 5;
+    margin-left: -45px;
+ 	position:absolute;
+}
+
+.ctrlz{
+    width:40px;
+	height:40px;
+    margin-left: -20px;
+ 	position:absolute;
+ 	top: 70%;
+    left: 50%;
+    z-index: 5;
+}
+	#press .downButton{
+    background: url("../Icons/down.png") no-repeat;
+    width:30px;
+    height:30px;
+    top: 90%;
+    left: 50%;
+    z-index: 5;
+ 	position:absolute;
+ 	background-size: cover;
+	background-repeat: no-repeat;
+	margin-left: -15px;
+}
+
+#press .downButton:hover{
+    background: url("../Icons/down_.png") no-repeat;
+    width:30px;
+    height:30px;
+    top: 90%;
+    left: 50%;
+    z-index: 5;
+ 	position:absolute;
+ 	background-size: cover;
+	background-repeat: no-repeat;
+	margin-left: -15px;
 }
 }
