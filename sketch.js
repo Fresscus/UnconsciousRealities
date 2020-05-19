@@ -381,6 +381,7 @@ function draw(){
     s1 = false;
   }
   
+  background(255);
   switch(choice){
     case 0: //yellow video
       Yellow();
