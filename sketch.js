@@ -1,5 +1,4 @@
 
-
 let canvas;
 let canvasWidth;
 let canvasHeight;
@@ -107,6 +106,7 @@ let barIntro = 0;
 let infoIntro = 0;
 
 let start = true;
+let VideoSwitch = true;
 
 function preload(){
   font = loadFont('FetishRegular.ttf');
@@ -506,6 +506,7 @@ function reset(){
   infoIntro = 0;
   TIME = 0;
   barTime = 0;
+  VideoSwitch = true;
   
 
   for(let i = 0; i<6; i++){
@@ -533,7 +534,10 @@ function reset(){
 
 //yellow video method
 function Yellow(){
+  if(VideoSwitch == true){
   YellowVid[videoRandom].play();
+  VideoSwitch = false;
+  }
   image(YellowVid[videoRandom],0,0);
 
   YellowVid[videoRandom].onended(reset);
@@ -547,7 +551,11 @@ function Yellow(){
 
 //red video method
 function Red(){
+  if(VideoSwitch == true){
   RedVid[videoRandom].play();
+  VideoSwitch = false;
+  }
+
   image(RedVid[videoRandom],0,0);
 
   RedVid[videoRandom].onended(reset);
@@ -561,7 +569,11 @@ function Red(){
 
 //green video method
 function Green(){
+  if(VideoSwitch == true){
   GreenVid[videoRandom].play();
+  VideoSwitch = false;
+  }
+
   image(GreenVid[videoRandom],0,0);
 
   GreenVid[videoRandom].onended(reset);
@@ -577,19 +589,28 @@ function Green(){
 //any video method
 function Any(){
   if(videoChoice == 0){
+    if(VideoSwitch == true){
     YellowVid[videoRandom].play();
+    VideoSwitch = false;
+    }
     image(YellowVid[videoRandom],0,0);
 
     YellowVid[videoRandom].onended(reset);
   }
   if(videoChoice == 1){
+    if(VideoSwitch == true){
     RedVid[videoRandom].play();
+    VideoSwitch = false;
+    }
     image(RedVid[videoRandom],0,0);
     
     RedVid[videoRandom].onended(reset);
   }
   if(videoChoice == 2){
+    if(VideoSwitch == true){
     GreenVid[videoRandom].play();
+    VideoSwitch = false;
+    }
     image(GreenVid[videoRandom],0,0);
     
     GreenVid[videoRandom].onended(reset);
@@ -707,16 +728,14 @@ function mouseClicked(){
     YellowVid[i].remove();
     GreenVid[i].remove();
     RedVid[i].remove();
-  }
+    }
 
-  loadVideos();
+    loadVideos();
   
-  
+
     begin = true;
     mouseStage = 'none';
   }
-
-
 
   if(mouseStage == 'question'){
     if((mouseX < ((1/2)*canvasWidth))&&(mouseY>((1/4)*canvasHeight))){
