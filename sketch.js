@@ -291,7 +291,7 @@ function draw(){
         Question("What do you rather do?","Adventure","Develop new traits", 0, 1);
       }
       if(randomQuestion == 1){
-        Question("What would you prefer to do?","Go out explore","Spend time on your hobbies", 0, 1);
+        Question("What would you prefer to do?","Go out explore","spend tim on \nyour hobbies", 0, 1);
       }
       if(randomQuestion == 2){
         Question("Choose One","Camping","Learn a new instrument", 0, 1);
