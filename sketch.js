@@ -108,11 +108,13 @@ let infoIntro = 0;
 let start = true;
 let VideoSwitch = true;
 
+let randomQuestion; 
+
 function preload(){
   font = loadFont('FetishRegular.ttf');
 
   //loading Landscapes
-  for(let i = 0; i < 6; i++){
+  for(let i = 0; i < 7; i++){
        grass[i] = loadImage("Landscapes/grass"+i+".png");
        wheat[i] = loadImage("Landscapes/wheat"+i+".png");
        desert[i] = loadImage("Landscapes/desert"+i+".png");
@@ -124,7 +126,7 @@ function preload(){
     }
 
   //loading Objects
-  for(let i = 0; i < 6; i++){
+  for(let i = 0; i < 12; i++){
       bird[i] = loadImage("Objects/bird"+i+".png");
       butter[i] = loadImage("Objects/butterfly"+i+".png");
       fish[i] = loadImage("Objects/fish"+i+".png");    
@@ -209,6 +211,7 @@ function setup(){
   objectDuplicate = 0;
 
   //loading Videos
+  randomQuestion = int(random(0,3));
 }
 
 function draw(){
@@ -243,42 +246,117 @@ function draw(){
     
     //--------------------------------------------------------------------------------------------------------------------------------StartingQuestions
     if(begin == true){
+      
+
   switch(no){
       case 0://video question 1
-      Question("Which of these traits do you prefer?", "Intellegence", "Passion", 4, 6);
+      if(randomQuestion == 0){
+        Question("How would you want to go abroad?" , "Alone", "With Friends", 0 , 3);
+      }
+      if(randomQuestion == 1){
+        Question("How would you like to spend your time?", "Alone", "With Friends", 0 , 3);
+      }
+      if(randomQuestion == 2){
+        Question("How do you prefer to spend your free time?" , "Alone", "With Friends", 0 , 3);
+      }
       break;
       
       case 1://video question 2
-      Question("Which of these words describes best your character?","Truthful","Energetic",5,4);
+      if(randomQuestion == 0){
+        Question("choose One","Headphones","Speakers",7,7);
+      }
+      if(randomQuestion == 1){
+        Question("choose One","Religion","Science",7,7);
+      }
+      if(randomQuestion == 2){
+        Question("When you are abroad what do you prefer to visit?","Amusement Parks","Museums",7,7);
+      }
       break;
       
       case 2://video question 3
-      Question("Which of these best describe you?","Loyal","Very Emotional",5,6);
+      if(randomQuestion == 0){
+        Question("Which of these traits do you prefer in someone else?","Someone Loyal","Someone Very Emotional",5,6);
+      }
+      if(randomQuestion == 1){
+        Question("Which of these do you like the most?","Loyal","Passionate",5,6);
+      }
+      if(randomQuestion == 2){
+        Question("Which trait do you like the most","Loyal","Very Emotional",5,6);
+      }
       break;
           
       //--------------------------------------------------------------- VIDEO QUESTIONS
-      case 3://object question 1   
-      Question("Choose One : ", "Personal Growth", "Love Others", 1, 2);
+      case 3://object question 1
+      if(randomQuestion == 0){
+        Question("What do you rather do?","Adventure","Develop new traits", 0, 1);
+      }
+      if(randomQuestion == 1){
+        Question("What would you prefer to do?","Go out explore","Spend time at home on a particular hobby", 0, 1);
+      }
+      if(randomQuestion == 2){
+        Question("Choose One","Camping","Learn a new instrument", 0, 1);
+      }
       break;
       
       case 4://object question 2
-      Question("Choose One : ", "Freedom" , "Balance", 3 , 2 );
+      if(randomQuestion == 0){
+        Question("Choose One : ", "Freedom" , "Balance", 3 , 2 );
+      }
+      if(randomQuestion == 1){
+        Question("Do you think law helps in balancing the world?", "No" , "Yes", 3 , 2 );
+      }
+      if(randomQuestion == 2){
+        Question("Which of these do you prefer? ", "Freedom" , "Balance", 3 , 2 );
+      }
       break;
       
       case 5://object question 3
-      Question("What do you rather do?","Adventure","Develop new traits", 0, 1);
+      if(randomQuestion == 0){   
+        Question("Choose One : ", "Personal Growth", "Love Others", 1, 2);
+      }
+      if(randomQuestion == 1){
+        Question("What do you find more important?", "Love yourself", "Love Others", 1, 2);
+      }
+      if(randomQuestion == 2){
+        Question("How would you like to spend your time?", "Alone developing on new traits", "having fun with others", 1, 2);
+      }
       break;
       
       case 6://object question 4
-      Question("How would you want to go abroad?" , "Alone", "With Friends", 0 , 3);
+      if(randomQuestion == 0){
+        Question("Which of these traits do you prefer in someone else?", "Someone Intelligent", "Someone Passion", 4, 6);
+      }
+      if(randomQuestion == 1){
+        Question("Which characterestic best describes you?", "Intellegence", "Very Emotional", 4, 6);
+      }
+      if(randomQuestion == 2){
+        Question("Which trait do you like the most", "Intellegence", "Passion", 4, 6);
+      }
       break;
       
       case 7:
-      Question("Choose One","Fruit","Vegetables",7,7);
+      if(randomQuestion == 0){
+        Question("Choose One","Fruit","Vegetables",7,7);
+      }
+      if(randomQuestion == 1){
+        Question("Choose One","Summer","Winter",7,7);
+      }
+      if(randomQuestion == 2){
+        Question("Choose One","Book","Movie",7,7);
+      }
       break;
       
       case 8:
-      Question("choose One","Headphones","Speakers",7,7);
+
+      if(randomQuestion == 0){
+        Question("Which of these words describes best your character?","Truthful","Energetic",5,4);
+      }
+      if(randomQuestion == 1){
+        Question("Which of these traits would you like your friends to have?","Truthful","Energetic",5,4);
+      }
+      if(randomQuestion == 2){
+        Question("Which of these do you like the most?","Truthful","Energetic",5,4);
+      }
       break;
     }
     }
@@ -360,10 +438,10 @@ function draw(){
     }
         
     videoRandom = int(random(0,6));
-    Ran = int(random(0,6));
+    Ran = int(random(0,7));
     imageChoice = int(random(0,2));
     videoChoice = int(random(0,3));
-    objectChoice = int(random(0,2));
+    objectChoice = int(random(0,4));
     objectChoiceOver = int(random(0,2));
     objectChoiceShow = int(random(0,10));
     
@@ -447,6 +525,7 @@ function Question(Question,Answer1,Answer2,no1,no2){
 
     if (no != 9){
       no++;
+      randomQuestion = int(random(0,3));
     }
     if(no == 9){
       QuestionDone = true;
@@ -459,6 +538,7 @@ function Question(Question,Answer1,Answer2,no1,no2){
 
       if (no != 9){
         no++;
+        randomQuestion = int(random(0,3));
       }
       if(no == 9){
 
@@ -476,6 +556,7 @@ function Question(Question,Answer1,Answer2,no1,no2){
 
       if (no != 9){
         no++;
+        randomQuestion = int(random(0,3));
       }
       if(no == 9){
 
@@ -636,46 +717,46 @@ function Obj(){
   if(objectChoiceShow == 0){ // object showing
     if(object == 0){ //---------------------------------------------------------PLANET
       if((choice == 0)|| ((choice == 3)&&(videoChoice == 0))){ //YELLOW
-        image(planet[objectChoice+4],objectX,objectY);//white
+        image(planet[objectChoice+8],objectX,objectY);//white
       }
       if((choice == 1)|| ((choice == 3)&&(videoChoice == 1))){ //RED
         image(planet[objectChoice],objectX,objectY);//blue
       }
       if((choice == 2) || ((choice == 3)&&(videoChoice == 2))){ //GREEN
-        image(planet[objectChoice+2],objectX,objectY);//red
+        image(planet[objectChoice+4],objectX,objectY);//red
       }
     }
     if(object == 1){ //----------------------------------------------------------FISH
       if((choice == 0)|| ((choice == 3)&&(videoChoice == 0))){ //YELLOW
-        image(fish[objectChoice+4],objectX,objectY);//white
+        image(fish[objectChoice+8],objectX,objectY);//white
       }
       if((choice == 1)|| ((choice == 3)&&(videoChoice == 1))){ //RED
         image(fish[objectChoice],objectX,objectY);//blue
       }
       if((choice == 2) || ((choice == 3)&&(videoChoice == 2))){ //GREEN
-        image(fish[objectChoice+2],objectX,objectY);//red
+        image(fish[objectChoice+4],objectX,objectY);//red
       }
     }
     if(object == 2){ //----------------------------------------------------------BIRD
       if((choice == 0)|| ((choice == 3)&&(videoChoice == 0))){ //YELLOW
-        image(bird[objectChoice+4],objectX,objectY);//white
+        image(bird[objectChoice+8],objectX,objectY);//white
       }
       if((choice == 1)|| ((choice == 3)&&(videoChoice == 1))){ //RED
         image(bird[objectChoice],objectX,objectY);//blue
       }
       if((choice == 2) || ((choice == 3)&&(videoChoice == 2))){ //GREEN
-        image(bird[objectChoice+2],objectX,objectY);//red
+        image(bird[objectChoice+4],objectX,objectY);//red
       }
     }
     if(object == 3){ //----------------------------------------------------------BUTTERFLY
       if((choice == 0)|| ((choice == 3)&&(videoChoice == 0))){ //YELLOW
-        image(butter[objectChoice+4],objectX,objectY);//white
+        image(butter[objectChoice+8],objectX,objectY);//white
       }
       if((choice == 1)|| ((choice == 3)&&(videoChoice == 1))){ //RED
         image(butter[objectChoice],objectX,objectY);//blue
       }
       if((choice == 2) || ((choice == 3)&&(videoChoice == 2))){ //GREEN
-        image(butter[objectChoice+2],objectX,objectY);//red
+        image(butter[objectChoice+4],objectX,objectY);//red
       }
     }
   }  

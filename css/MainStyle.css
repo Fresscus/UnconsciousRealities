@@ -83,6 +83,7 @@ body{
  	top: 88%;
     left: 50%;
     z-index: 5;
+    opacity: 0.4;
 }
 
 .ctrlz{
@@ -93,6 +94,7 @@ body{
  	top: 82%;
     left: 50%;
     z-index: 5;
+    opacity: 0.4;
 }
 
 .heading{
@@ -230,6 +232,7 @@ body{
     z-index: 5;
     margin-left: -45px;
  	position:absolute;
+ 	opacity: 0.4;
 }
 
 .ctrlz{
@@ -240,6 +243,7 @@ body{
  	top: 74%;
     left: 50%;
     z-index: 5;
+    opacity: 0.4;
 }
 
 
