@@ -291,7 +291,7 @@ function draw(){
         Question("What do you rather do?","Adventure","Develop new traits", 0, 1);
       }
       if(randomQuestion == 1){
-        Question("What would you prefer to do?","Go out explore","Spend time at home on a particular hobby", 0, 1);
+        Question("What would you prefer to do?","Go out explore","Spend time on your hobbies", 0, 1);
       }
       if(randomQuestion == 2){
         Question("Choose One","Camping","Learn a new instrument", 0, 1);
@@ -315,10 +315,10 @@ function draw(){
         Question("Choose One : ", "Personal Growth", "Love Others", 1, 2);
       }
       if(randomQuestion == 1){
-        Question("What do you find more important?", "Love yourself", "Love Others", 1, 2);
+        Question("What do you find more important?", "Loving yourself", "Loving Others", 1, 2);
       }
       if(randomQuestion == 2){
-        Question("How would you like to spend your time?", "Alone developing on new traits", "having fun with others", 1, 2);
+        Question("How would you like to spend your time?", "Alone", "With Friends", 1, 2);
       }
       break;
       
