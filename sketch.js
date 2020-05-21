@@ -927,7 +927,7 @@ function informationBar(){
 
       fill(250,110,82);
       textSize(18);
-      text("These colours show \nelements of intelligence, \nexcitement and hapiness \naccording to online \nDream Dictionaries",1950-infoIntro,190);
+      text("These colours show \nelements of intelligence, \nexcitement and happiness \naccording to online \nDream Dictionaries",1950-infoIntro,190);
     }
 
     if(choice == 1){
