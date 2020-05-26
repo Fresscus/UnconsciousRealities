@@ -263,13 +263,13 @@ function draw(){
       
       case 1://video question 2
       if(randomQuestion == 0){
-        Question("choose One","Headphones","Speakers",7,7);
+        Question("choose One :","Headphones","Speakers",7,7);
       }
       if(randomQuestion == 1){
-        Question("choose One","Religion","Science",7,7);
+        Question("choose One :","Religion","Science",7,7);
       }
       if(randomQuestion == 2){
-        Question("When you are abroad what do you prefer to visit?","Amusement Parks","Museums",7,7);
+        Question("When do you prefer to visit when abroad?","Amusement Parks","Museums",7,7);
       }
       break;
       
@@ -291,10 +291,10 @@ function draw(){
         Question("What do you rather do?","Adventure","Develop new traits", 0, 1);
       }
       if(randomQuestion == 1){
-        Question("What would you prefer to do?","Go out explore","spend tim on \nyour hobbies", 0, 1);
+        Question("What would you prefer to do?","Go out explore","Spend time on \nyour hobbies", 0, 1);
       }
       if(randomQuestion == 2){
-        Question("Choose One","Camping","Learn a new instrument", 0, 1);
+        Question("Choose One :","Camping","Learn a new instrument", 0, 1);
       }
       break;
       
@@ -324,32 +324,32 @@ function draw(){
       
       case 6://object question 4
       if(randomQuestion == 0){
-        Question("Which of these traits do you prefer in someone else?", "Someone Intelligent", "Someone Passion", 4, 6);
+        Question("Which of these traits do you prefer in someone else?", "Someone Intelligent", "Someone Passionate", 4, 6);
       }
       if(randomQuestion == 1){
         Question("Which characterestic best describes you?", "Intellegence", "Very Emotional", 4, 6);
       }
       if(randomQuestion == 2){
-        Question("Which trait do you like the most", "Intellegence", "Passion", 4, 6);
+        Question("Which trait do you like the most?", "Intellegence", "Passion", 4, 6);
       }
       break;
       
       case 7:
       if(randomQuestion == 0){
-        Question("Choose One","Fruit","Vegetables",7,7);
+        Question("Choose One :","Fruit","Vegetables",7,7);
       }
       if(randomQuestion == 1){
-        Question("Choose One","Summer","Winter",7,7);
+        Question("Choose One :","Summer","Winter",7,7);
       }
       if(randomQuestion == 2){
-        Question("Choose One","Book","Movie",7,7);
+        Question("Choose One :","Book","Movie",7,7);
       }
       break;
       
       case 8:
 
       if(randomQuestion == 0){
-        Question("Which of these words describes best your character?","Truthful","Energetic",5,4);
+        Question("Which of these words best describes your character?","Truthful","Energetic",5,4);
       }
       if(randomQuestion == 1){
         Question("Which of these traits would you like your friends to have?","Truthful","Energetic",5,4);
